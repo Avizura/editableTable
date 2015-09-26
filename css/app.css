@@ -10,12 +10,12 @@ body {
 }
 input {
   border: 2px solid transparent;
-}
-input:active {
-  width: auto;
+  width: 98%;
+  padding: 1%;
 }
 input[type="checkbox"] {
   outline: none;
+  margin: 5px 0 0 0 !important;
 }
 #header {
   text-align: center;
@@ -52,7 +52,7 @@ input[type="checkbox"] {
   color: #0b0;
 }
 .table {
-  min-width: 800px;
+  min-width: 700px;
   margin-bottom: 0 !important;
 }
 .table-add {

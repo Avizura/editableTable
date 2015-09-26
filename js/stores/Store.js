@@ -34,6 +34,7 @@ function createRow() {
 };
 
 function update(id, column, update) {
+  console.log('UPDATE!');
   rows[id][column] = update;
 }
 
@@ -42,7 +43,6 @@ function deleteRow(id) {
     return chr.id == id;
   });
   rows.splice(index, 1);
-  console.log(rows);
 }
 
 function deleteAllRows() {

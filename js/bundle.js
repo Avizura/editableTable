@@ -477,7 +477,6 @@ var Cell = React.createClass({displayName: "Cell",
             case 13: // Enter
             case 9: // Tab
                 evt.target.blur();
-                Actions.updateCell(this.props.id, this.props.column, this.state.data);
                 this.setState({isEditMode: false});
                 break;
         }
@@ -585,17 +584,19 @@ var Table = React.createClass({displayName: "Table",
 
   render: function() {
     return (
-      React.createElement("table", {className: "table table-striped mytable"}, 
-        React.createElement("span", {className: "table-add glyphicon glyphicon-plus", onClick: this._onCreateClick}), 
-        React.createElement("thead", null, 
-          React.createElement("tr", null, 
-            React.createElement("th", null, React.createElement("span", {className: "glyphicon glyphicon-trash", onClick: this._onDeleteAllClick})), 
-            React.createElement("th", null, " First "), 
-            React.createElement("th", null, " Second "), 
-            React.createElement("th", null, " Third ")
-          )
-        ), 
-        React.createElement(RowsList, {data: this.state.data})
+      React.createElement("div", {className: "table-responsive"}, 
+        React.createElement("table", {className: "table table-striped mytable"}, 
+          React.createElement("span", {className: "table-add glyphicon glyphicon-plus", onClick: this._onCreateClick}), 
+          React.createElement("thead", null, 
+            React.createElement("tr", null, 
+              React.createElement("th", null, React.createElement("span", {className: "glyphicon glyphicon-trash", onClick: this._onDeleteAllClick})), 
+              React.createElement("th", null, " First "), 
+              React.createElement("th", null, " Second "), 
+              React.createElement("th", null, " Third ")
+            )
+          ), 
+          React.createElement(RowsList, {data: this.state.data})
+        )
       )
     );
   },
@@ -608,7 +609,6 @@ var Table = React.createClass({displayName: "Table",
   },
 
   _onCreateClick: function() {
-    console.log('ACTIONS CREATE');
     Actions.createRow();
   },
 
@@ -683,6 +683,7 @@ function createRow() {
 };
 
 function update(id, column, update) {
+  console.log('UPDATE!');
   rows[id][column] = update;
 }
 
@@ -691,7 +692,6 @@ function deleteRow(id) {
     return chr.id == id;
   });
   rows.splice(index, 1);
-  console.log(rows);
 }
 
 function deleteAllRows() {

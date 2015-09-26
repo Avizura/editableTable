@@ -27,18 +27,20 @@ var Table = React.createClass({
 
   render: function() {
     return (
-      <table className = "table table-striped mytable">
-        <span className="table-add glyphicon glyphicon-plus" onClick={this._onCreateClick}></span>
-        <thead>
-          <tr>
-            <th><span className = "glyphicon glyphicon-trash" onClick={this._onDeleteAllClick}></span></th>
-            <th> First </th>
-            <th> Second </th>
-            <th> Third </th>
-          </tr>
-        </thead>
-        < RowsList data = {this.state.data} />
-      </table>
+      <div className = "table-responsive">
+        <table className = "table table-striped mytable">
+          <span className = "table-add glyphicon glyphicon-plus" onClick={this._onCreateClick}></span>
+          <thead>
+            <tr>
+              <th><span className = "glyphicon glyphicon-trash" onClick={this._onDeleteAllClick}></span></th>
+              <th> First </th>
+              <th> Second </th>
+              <th> Third </th>
+            </tr>
+          </thead>
+          < RowsList data = {this.state.data} />
+        </table>
+      </div>
     );
   },
 
@@ -50,7 +52,6 @@ var Table = React.createClass({
   },
 
   _onCreateClick: function() {
-    console.log('ACTIONS CREATE');
     Actions.createRow();
   },
 

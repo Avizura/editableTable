@@ -23,7 +23,6 @@ var Cell = React.createClass({
             case 13: // Enter
             case 9: // Tab
                 evt.target.blur();
-                Actions.updateCell(this.props.id, this.props.column, this.state.data);
                 this.setState({isEditMode: false});
                 break;
         }
