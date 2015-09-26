@@ -1,0 +1,61 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.4em;
+  background: #eaeaea url('bg.png');
+  color: #4d4d4d;
+}
+input {
+  border: 2px solid transparent;
+}
+input:active {
+  width: auto;
+}
+input[type="checkbox"] {
+  outline: none;
+}
+#header {
+  text-align: center;
+}
+#app {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  margin: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+}
+.glyphicon-trash {
+  color: blue;
+  z-index: 1000;
+}
+.glyphicon-trash:hover {
+  color: #0b0;
+}
+.glyphicon-plus {
+  font-size: 19px;
+  color: blue;
+  position: absolute !important;
+  right: 10px;
+  top: 0 !important;
+  padding: 8px;
+  z-index: 1000;
+}
+.glyphicon-plus:hover {
+  color: #0b0;
+}
+.table {
+  min-width: 800px;
+  margin-bottom: 0 !important;
+}
+.table-add {
+  cursor: pointer;
+  position: absolute;
+}
