@@ -33,6 +33,7 @@ input[type="checkbox"] {
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.15);
 }
 .glyphicon-trash {
+  cursor: pointer;
   color: blue;
   z-index: 1000;
 }
@@ -40,6 +41,7 @@ input[type="checkbox"] {
   color: #0b0;
 }
 .glyphicon-plus {
+  cursor: pointer;
   font-size: 19px;
   color: blue;
   position: absolute !important;
@@ -54,8 +56,4 @@ input[type="checkbox"] {
 .table {
   min-width: 700px;
   margin-bottom: 0 !important;
-}
-.table-add {
-  cursor: pointer;
-  position: absolute;
 }
